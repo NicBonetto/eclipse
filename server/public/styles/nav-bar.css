@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:200');
+
+.eclipse-nav {
+  width: 140px;
+  height: 40px;
+  margin-top: 2vh;
+  margin-left: 1vh;
+}
+
+.eclipse-nav:hover {
+  cursor: pointer;
+}
+
+.nav-text {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 200;
+  letter-spacing: 1px;
+  font-size: 30px;
+  vertical-align: center;
+  display: inline-block;
+  margin-bottom: 1vh;
+  margin-left: 1vh;
+}
+
+.nav-text a {
+  color: rgba(162, 167, 171, 1);
+}
+
+.nav-text:visited {
+  color: rgba(162, 167, 171, 1);
+}
+
+.eclipse-image {
+  width: 30px;
+  height: 30px;
+  vertical-align: center;
+  display: inline-block;
+}
