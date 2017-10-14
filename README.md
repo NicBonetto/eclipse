@@ -4,7 +4,7 @@ A web app to discover new music artists.
 # Getting Started
 This web application uses Git and Node, so ensure they are preinstalled. Then follow these commands in the terminal:
 ```
-$ git clone
+$ git clone https://github.com/NicBonetto/eclipse.git
 $ cd eclipse/
 $ npm install
 ```
