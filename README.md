@@ -1,5 +1,5 @@
 # Eclipse
-A web app to discover new music artists.
+A web app to discover new music artists through a chain of suggestions.
 
 # Getting Started
 This web application uses Git and Node, so ensure they are preinstalled. Then follow these commands in the terminal:
