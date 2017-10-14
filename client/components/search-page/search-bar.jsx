@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import { Redirect } from 'react-router'
+import { connect } from 'react-redux'
 import Store from '../../store'
 
 class SearchBar extends Component {
@@ -15,9 +17,15 @@ class SearchBar extends Component {
       .then(parsed => {
           Store.dispatch({ type: 'RECEIVED_ARTIST', payload: { artist: { name: parsed[0].name, pic: parsed[0].images[0].url } } })
       })
+    Store.dispatch({ type: 'REDIRECT_NOW' })
   }
 
   render() {
+    if(this.props.redirect.shouldDirect) {
+      return (
+        <Redirect to='/discover'/>
+      )
+    }
     return (
       <section className="row">
         <form className="col s12" onSubmit={this.handleSubmit.bind(this)}>
@@ -42,4 +50,8 @@ class SearchBar extends Component {
   }
 }
 
-export default SearchBar
+function mapStateToProps(state) {
+  return {redirect: state.redirect}
+}
+
+export default connect(mapStateToProps)(SearchBar)
