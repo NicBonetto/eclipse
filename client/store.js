@@ -1,5 +1,5 @@
 import { createStore, combineReducers } from 'redux'
-import currentArtist from 'utils/current-artist'
+import currentArtist from './reducers/current-artist'
 
 let store = createStore(combineReducers({
   current: currentArtist

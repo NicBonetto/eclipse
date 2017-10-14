@@ -4,22 +4,20 @@ var path = require('path')
 module.exports = {
   entry: './client/main.jsx',
   output: {
-    path: path.resolve(__dirname, 'build'),
+    path: path.resolve(__dirname, 'server/public/build'),
     filename: 'app.bundle.js'
   },
   module: {
     loaders: [
       {
-        test: /\.js$/,
+        test: /\.jsx?$/,
+        exclude: /node_modules/,
         loader: 'babel-loader',
         query: {
           presets: ['es2015', 'react']
         }
       }
     ]
-  },
-  stats: {
-    colors: true
   },
   devtool: 'source-map'
 }

@@ -1,7 +1,7 @@
 import express from 'express'
 import Spotify from 'spotify-web-api-node'
 import dotenv from 'dotenv'
-import joinArtist from './utils/join-artist'
+import separateArtist from './utils/separate-artist'
 
 dotenv.config()
 const app = express()
@@ -13,8 +13,17 @@ const spotify = new Spotify({
 
 app.use(express.static(__dirname + '/public/'))
 
+app.get('/authorize', (req, res) => {
+  spotify.clientCredentialsGrant()
+    .then(data => {
+      spotify.setAccessToken(data.body['access_token'])
+      res.sendStatus(200)
+    })
+})
+
 app.get('/spotify/search/:artist', (req, res) => {
-  spotify.searchArtists(req.params.artist)
+  const artist = separateArtist(req.params.artist)
+  spotify.searchArtists(artist)
     .then(data => {
       const found = data.body.artists.items.filter(search => {
         if(search.name === artist) return search
