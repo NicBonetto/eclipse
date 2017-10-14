@@ -4,6 +4,7 @@
   "description": "A web app to discover new music artists.",
   "main": "index.js",
   "scripts": {
+    "test": "mocha --compilers js:babel-register -w -R nyan",
     "webpack": "webpack",
     "start": "babel-node server/index.js --presets es2015",
     "dev": "webpack && npm start"
@@ -33,10 +34,12 @@
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
+    "babel-polyfill": "^6.26.0",
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-react": "^6.24.1",
     "chai": "^4.1.2",
     "mocha": "^4.0.1",
+    "request": "^2.83.0",
     "webpack": "^3.7.1"
   }
 }
