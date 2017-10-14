@@ -3,3 +3,11 @@
   height: 25vh;
   width: 25vh;
 }
+
+.artist-box {
+  margin-top: 15vh;
+}
+
+.increase-margin-top {
+  margin-top: 3vh;
+}
