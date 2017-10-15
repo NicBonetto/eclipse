@@ -39,7 +39,11 @@ app.get('/spotify/recommended/:artist', (req, res) => {
     .then(data => {
       spotify.getArtistRelatedArtists(findId(data.body.artists.items, separateArtist(req.params.artist)))
         .then(recommend => {
-          res.json(recommend.body.artists)
+          const artists = recommend.body.artists
+            .map(artist => {
+              return {name: artist.name, pic: artist.images[0].url}
+            })
+          res.json(artists)
         })
     })
 })

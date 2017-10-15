@@ -1,9 +1,23 @@
-function recommended(state = [], action) {
+function recommended(state = [
+  {name: '', pic: ''},
+  {name: '', pic: ''},
+  {name: '', pic: ''},
+  {name: '', pic: ''},
+  {name: '', pic: ''},
+  {name: '', pic: ''}
+  ], action) {
   switch(action.type) {
     case 'RECEIVED_ARTISTS':
-      return Object.assign({}, action.payload.artists)
+      return [...action.payload.artists]
     case 'CLEAR_ARTISTS':
-      return []
+      return [
+          {name: '', pic: ''},
+          {name: '', pic: ''},
+          {name: '', pic: ''},
+          {name: '', pic: ''},
+          {name: '', pic: ''},
+          {name: '', pic: ''}
+        ]
     default:
       return state
   }

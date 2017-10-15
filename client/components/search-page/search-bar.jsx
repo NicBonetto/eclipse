@@ -11,11 +11,17 @@ class SearchBar extends Component {
   handleSubmit(e) {
     e.preventDefault()
     Store.dispatch({ type: 'CLEAR_CURRENT_ARTIST' })
+    Store.dispatch({ type: 'CLEAR_ARTISTS' })
     const artist = this.joinSearch(this.refs.keyword.value)
     fetch('/spotify/search/' + artist)
       .then(data => data.json())
       .then(parsed => {
           Store.dispatch({ type: 'RECEIVED_ARTIST', payload: { artist: { name: parsed[0].name, pic: parsed[0].images[0].url } } })
+      })
+    fetch('/spotify/recommended/' + artist)
+      .then(data => data.json())
+      .then(parsed => {
+        Store.dispatch({ type: 'RECEIVED_ARTISTS', payload: { artists: parsed } })
       })
     Store.dispatch({ type: 'REDIRECT_NOW' })
   }

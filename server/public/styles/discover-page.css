@@ -1,7 +1,15 @@
+@import url('https://fonts.googleapis.com/css?family=Abel|Roboto:300,400');
+
 .image-bubble {
   border-radius: 100%;
   height: 25vh;
   width: 25vh;
+}
+
+.image-bubble-sm {
+  border-radius: 100%;
+  height: 15vh;
+  width: 15vh;
 }
 
 .artist-box {
@@ -11,3 +19,53 @@
 .increase-margin-top {
   margin-top: 3vh;
 }
+
+.artist-text {
+  color: rgba(162, 167, 171, 1);
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  letter-spacing: 1px; 
+}
+
+.artist-text:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+@keyframes shiftSides {
+  0% {
+    transform: translate3d(50px, 40px, 0);
+    transition: ease-in;
+  }
+  50% {
+    transform: translate3d(50px, 50px, 0);
+    transition: ease-out;
+  }
+  100% {
+    transform: translate3d(50px, 40px, 0)
+  }
+}
+
+.shifter {
+  animation: shiftSides 5s infinite;
+
+}
+
+.recommended-box {
+  height: auto;
+  width: auto;
+}
+
+.rec-container-1 {
+  margin-top: 10vh;
+}
+
+.current-box {
+  margin-left: 5vh;
+}
+
+.separator {
+  margin-top: 3vh;
+  margin-bottom: 9vh;
+}
+
