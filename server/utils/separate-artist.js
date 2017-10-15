@@ -1,5 +1,5 @@
-function joinArtist(artist) {
+function separateArtist(artist) {
   return artist.split(/(?=[A-Z])/).join(' ')
 }
 
-export default joinArtist
+export default separateArtist
