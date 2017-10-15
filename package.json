@@ -4,7 +4,7 @@
   "description": "A web app to discover new music artists.",
   "main": "index.js",
   "scripts": {
-    "test": "mocha --compilers js:babel-register -w -R nyan",
+    "test": " npm dev && mocha --compilers js:babel-register -w -R nyan",
     "webpack": "webpack",
     "start": "babel-node server/index.js --presets es2015",
     "dev": "webpack && npm start"
