@@ -53,12 +53,12 @@ app.get('/spotify/songs/:artist', (req, res) => {
   spotify.searchTracks('artist:' + artist)
     .then(data => data.body.tracks.items)
     .then(list => {
-      const hrefs = [
-        {name: list[0].name, href: list[0].href},
-        {name: list[1].name, href: list[1].href},
-        {name: list[2].name, href: list[2].href}
+      const sources = [
+        {name: list[0].name, href: list[0].preview_url},
+        {name: list[1].name, href: list[1].preview_url},
+        {name: list[2].name, href: list[2].preview_url}
       ]
-      res.json(hrefs)
+      res.json(sources)
     })
 })
 

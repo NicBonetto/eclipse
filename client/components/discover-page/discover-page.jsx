@@ -3,6 +3,7 @@ import { connect } from 'react-redux'
 import CurrentArtist from './current-artist.jsx'
 import Recommended from './recommended-artists.jsx'
 import NavBar from '../nav-bar.jsx'
+import Songs from './songs.jsx'
 import Store from '../../store'
 
 class DiscoverPage extends Component {
@@ -38,6 +39,7 @@ class DiscoverPage extends Component {
             </div>
             <div className="col s4 current-box">
               <CurrentArtist/>
+              <Songs/>
             </div>
             <div className="col s2">
               {Recommended(this.props.recommended[3].name)(this.props.recommended[3].pic)}

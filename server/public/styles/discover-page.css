@@ -69,3 +69,29 @@
   margin-bottom: 9vh;
 }
 
+.audio-container {
+  display: inline-block;
+  margin-left: 3vh;
+  margin-top: 5vh;
+}
+
+.p-button {
+  height: 60px;
+  width: 60px;
+  border-radius: 100%;
+  background-size: cover;
+  background-position: center;
+  background-color: #c2cdd6;
+}
+
+.p-button:focus {
+  background-color: #c2cdd6;
+}
+
+.play {
+  background-image: url('/images/play.svg');
+}
+
+.pause {
+  background-image: url('/images/pause.png');
+}
