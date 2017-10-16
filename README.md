@@ -16,7 +16,7 @@ $ git clone https://github.com/NicBonetto/eclipse.git
 $ cd eclipse/
 $ npm install
 ```
-After all dependencies are installed, create a .env file with your own Spotify tokens, database url, and express listening port (CLIENT_ID, CLIENT_SECRET, REDIRECT_URI, PORT). Then run:
+After all dependencies are installed, create a .env file with your own Spotify tokens and express listening port (CLIENT_ID, CLIENT_SECRET, REDIRECT_URI, PORT). Then run:
 ```
 $ npm run dev
 ```
