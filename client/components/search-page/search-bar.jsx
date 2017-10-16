@@ -5,7 +5,7 @@ import Store from '../../store'
 
 class SearchBar extends Component {
   joinSearch(name) {
-    return name.split(' ').join('')
+    return name.split(' ').join('+')
   }
 
   handleSubmit(e) {

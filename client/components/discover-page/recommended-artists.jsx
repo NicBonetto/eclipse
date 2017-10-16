@@ -2,7 +2,7 @@ import React from 'react'
 import Store from '../../store'
 
 const joinSearch = name => {
-  return name.split(' ').join('')
+  return name.split(' ').join('+')
 }
 
 const handleClick = e => {
