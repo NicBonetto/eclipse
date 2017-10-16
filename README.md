@@ -20,4 +20,4 @@ After all dependencies are installed, create a .env file with your own Spotify t
 ```
 $ npm run dev
 ```
-Open your browser and type in: http://localhost:PORT <= PORT being the environmental variable you declared in the .env file :)
+Open your browser and type in: http://localhost:PORT <= PORT meaning the environmental variable value you declared in the .env file :)
