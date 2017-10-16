@@ -12,6 +12,7 @@ class SearchBar extends Component {
     e.preventDefault()
     Store.dispatch({ type: 'CLEAR_CURRENT_ARTIST' })
     Store.dispatch({ type: 'CLEAR_ARTISTS' })
+    Store.dispatch({ type: 'CLEAR_SONGS' })
     const artist = this.joinSearch(this.refs.keyword.value)
     fetch('/spotify/search/' + artist)
       .then(data => data.json())
@@ -22,6 +23,11 @@ class SearchBar extends Component {
       .then(data => data.json())
       .then(parsed => {
         Store.dispatch({ type: 'RECEIVED_ARTISTS', payload: { artists: parsed } })
+      })
+    fetch('/spotify/songs/' + artist)
+      .then(data => data.json())
+      .then(parsed => {
+        Store.dispatch({ type: 'RECEIVED_SONGS', payload: { songs: parsed } })
       })
     Store.dispatch({ type: 'REDIRECT_NOW' })
   }

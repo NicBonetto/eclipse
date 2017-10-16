@@ -48,4 +48,18 @@ app.get('/spotify/recommended/:artist', (req, res) => {
     })
 })
 
+app.get('/spotify/songs/:artist', (req, res) => {
+  const artist = separateArtist(req.params.artist)
+  spotify.searchTracks('artist:' + artist)
+    .then(data => data.body.tracks.items)
+    .then(list => {
+      const sources = [
+        {name: list[0].name, href: list[0].preview_url},
+        {name: list[1].name, href: list[1].preview_url},
+        {name: list[2].name, href: list[2].preview_url}
+      ]
+      res.json(sources)
+    })
+})
+
 app.listen(process.env.PORT)

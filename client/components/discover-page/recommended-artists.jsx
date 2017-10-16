@@ -9,6 +9,7 @@ const handleClick = e => {
   e.preventDefault()
   Store.dispatch({ type: 'CLEAR_CURRENT_ARTIST' })
   Store.dispatch({ type: 'CLEAR_ARTISTS' })
+  Store.dispatch({ type: 'CLEAR_SONGS' })
   const artist = joinSearch(e.target.innerHTML)
   fetch('/spotify/search/' + artist)
     .then(data => data.json())
@@ -19,6 +20,11 @@ const handleClick = e => {
     .then(data => data.json())
     .then(parsed => {
       Store.dispatch({ type: 'RECEIVED_ARTISTS', payload: { artists: parsed } })
+    })
+  fetch('/spotify/songs' + artist)
+    .then(data => data.json())
+    .then(parsed => {
+      Store.dispatch({ type: 'RECEIVED_SONGS', payload: { songs: parsed } })
     })
 }
 
