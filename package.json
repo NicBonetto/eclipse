@@ -10,7 +10,8 @@
     "test": " npm dev && mocha --compilers js:babel-register -w -R nyan",
     "webpack": "webpack",
     "start": "babel-node server/index.js --presets es2015",
-    "dev": "webpack && npm start"
+    "dev": "webpack && npm start",
+    "postinstall": "webpack"
   },
   "repository": {
     "type": "git",
