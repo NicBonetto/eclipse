@@ -1,6 +1,6 @@
-# [Eclipse](https://git.heroku.com/eclipse-music.git)
+# [Eclipse](https://eclipse-music.herokuapp.com/)
 A web app to discover new music artists through a chain of suggestions.
-Live Demo: https://git.heroku.com/eclipse-music.git
+Live Demo: https://eclipse-music.herokuapp.com/
 
 *Important Note: This app is still a work in progress. You can read about the bugs under Issues.*
 
