@@ -1,6 +1,9 @@
 {
   "name": "eclipse",
   "version": "1.0.0",
+  "engines": {
+    "node": "8.2.1"
+  },
   "description": "A web app to discover new music artists.",
   "main": "index.js",
   "scripts": {
