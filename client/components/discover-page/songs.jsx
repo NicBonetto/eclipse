@@ -44,7 +44,6 @@ class Songs extends Component {
       )
     }
     else {
-      console.log(this.props.songs[0].href)
       return (
         <section className="center-align">
           <div className="audio-container">
