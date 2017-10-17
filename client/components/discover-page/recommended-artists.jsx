@@ -22,7 +22,7 @@ const handleClick = e => {
     .then(parsed => {
       Store.dispatch({ type: 'RECEIVED_ARTISTS', payload: { artists: parsed } })
     })
-  fetch('/spotify/songs' + artist)
+  fetch('/spotify/songs/' + artist)
     .then(data => data.json())
     .then(parsed => {
       Store.dispatch({ type: 'RECEIVED_SONGS', payload: { songs: parsed } })
