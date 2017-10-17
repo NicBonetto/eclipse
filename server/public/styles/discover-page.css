@@ -72,7 +72,7 @@
 .audio-container {
   display: inline-block;
   margin-left: 3vh;
-  margin-top: 5vh;
+  margin-top: 4vh;
 }
 
 .p-button {
@@ -99,4 +99,32 @@
 .no-preview {
   margin-top: 12vh;
   margin-left: 2vh;
+}
+
+.currently-playing-box {
+  animation: fade-in 2s infinite;
+}
+
+.now-playing {
+  color: #ffd97d;
+}
+
+.streaming-line {
+  width: 60px;
+  height: 1px;
+  margin: 0 auto;
+  border: 0;
+  border-top: 1px solid #ffd97d;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
