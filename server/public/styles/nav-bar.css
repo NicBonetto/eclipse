@@ -26,6 +26,10 @@
   color: rgba(162, 167, 171, 1);
 }
 
+.nav-text a:hover {
+  color: #9ffcdf;
+}
+
 .nav-text:visited {
   color: rgba(162, 167, 171, 1);
 }
