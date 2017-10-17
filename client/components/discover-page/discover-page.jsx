@@ -1,9 +1,6 @@
 import React, { Component } from 'react'
-import { connect } from 'react-redux'
-import CurrentArtist from './current-artist.jsx'
-import Recommended from './recommended-artists.jsx'
 import NavBar from '../nav-bar.jsx'
-import Songs from './songs.jsx'
+import DisplayArtists from './display-artists.jsx'
 import Store from '../../store'
 
 class DiscoverPage extends Component {
@@ -28,36 +25,11 @@ class DiscoverPage extends Component {
               <h5 className="font-style">Choose a recommened artist.</h5>
             </div>
           </div>
-          <div className="row">
-            <div className="col s2 rec-container-1">
-              {Recommended(this.props.recommended[0].name)(this.props.recommended[0].pic)}
-            </div>
-            <div className="col s2">
-              {Recommended(this.props.recommended[1].name)(this.props.recommended[1].pic)}
-                <div className="separator"></div>
-              {Recommended(this.props.recommended[2].name)(this.props.recommended[2].pic)}
-            </div>
-            <div className="col s4 current-box">
-              <CurrentArtist/>
-              <Songs/>
-            </div>
-            <div className="col s2">
-              {Recommended(this.props.recommended[3].name)(this.props.recommended[3].pic)}
-                <div className="separator"></div>
-              {Recommended(this.props.recommended[4].name)(this.props.recommended[4].pic)}
-            </div>
-            <div className="col s2 rec-container-1">
-              {Recommended(this.props.recommended[5].name)(this.props.recommended[5].pic)}
-            </div>
-          </div>
+          <DisplayArtists/>
         </section>
       </section>
     )
   }
 }
 
-function mapStateToProps(state) {
-  return {recommended: state.recommended}
-}
-
-export default connect(mapStateToProps)(DiscoverPage)
+export default DiscoverPage

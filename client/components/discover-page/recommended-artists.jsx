@@ -11,6 +11,7 @@ const handleClick = e => {
   Store.dispatch({ type: 'CLEAR_ARTISTS' })
   Store.dispatch({ type: 'CLEAR_SONGS' })
   const artist = joinSearch(e.target.innerHTML)
+  console.log(artist)
   fetch('/spotify/search/' + artist)
     .then(data => data.json())
     .then(parsed => {
