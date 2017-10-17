@@ -7,7 +7,7 @@ Live Demo: https://eclipse-music.herokuapp.com/
 
 # Preview
 
-![Eclipse Demo](https://user-images.githubusercontent.com/28014739/31634263-bf3a5444-b277-11e7-897a-39c991a70443.gif)
+![Eclipse Demo](https://user-images.githubusercontent.com/28014739/31646027-2d35a37c-b2b4-11e7-932b-5c319cf49636.gif)
 
 # Run Locally
 This web application uses Git and Node, so ensure they are preinstalled. Then follow these commands in the terminal:
