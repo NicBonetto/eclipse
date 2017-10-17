@@ -36,22 +36,32 @@ class Songs extends Component {
     }
   }
   render() {
-    return (
-      <section className="center-align">
-        <div className="audio-container">
-          <audio src={this.props.songs[0].href} id="music-1"></audio>
-          <button className="p-button play" onClick={this.handleMusic1.bind(this)}></button>
-        </div>
-        <div className="audio-container">
-          <audio src={this.props.songs[1].href} id="music-2"></audio>
-          <button className="p-button play" onClick={this.handleMusic2.bind(this)}></button>
-        </div>
-        <div className="audio-container">
-          <audio src={this.props.songs[2].href} id="music-3"></audio>
-          <button className="p-button play" onClick={this.handleMusic3.bind(this)}></button>
-        </div>
-      </section>
+    if(this.props.songs[0].href === null || this.props.songs[1].href === null || this.props.songs[2].href === null) {
+      return (
+        <section className="center-align no-preview">
+          <h6 className="font-style">No Song Previews Available</h6>
+        </section>
+      )
+    }
+    else {
+      console.log(this.props.songs[0].href)
+      return (
+        <section className="center-align">
+          <div className="audio-container">
+            <audio src={this.props.songs[0].href} id="music-1"></audio>
+            <button className="p-button play" onClick={this.handleMusic1.bind(this)}></button>
+          </div>
+          <div className="audio-container">
+            <audio src={this.props.songs[1].href} id="music-2"></audio>
+            <button className="p-button play" onClick={this.handleMusic2.bind(this)}></button>
+          </div>
+          <div className="audio-container">
+            <audio src={this.props.songs[2].href} id="music-3"></audio>
+            <button className="p-button play" onClick={this.handleMusic3.bind(this)}></button>
+          </div>
+        </section>
     )
+    }
   }
 }
 

@@ -95,3 +95,8 @@
 .pause {
   background-image: url('/images/pause.png');
 }
+
+.no-preview {
+  margin-top: 12vh;
+  margin-left: 2vh;
+}
