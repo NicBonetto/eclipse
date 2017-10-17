@@ -22,7 +22,7 @@ class DiscoverPage extends Component {
           </div>
           <div className="row">
             <div className="col s12 center-align">
-              <h5 className="font-style">Choose a recommened artist.</h5>
+              <h5 className="font-style">Choose a recommended artist.</h5>
             </div>
           </div>
           <DisplayArtists/>
