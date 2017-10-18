@@ -5,7 +5,7 @@ This is a full stack React/Redux/Express app that uses Spotify API to give sugge
 
 Just type in a specific artist's name, and click through other recommended artists with the option to listen to 30 second song previews if they are available.
 
-This was a fun side project in my own attempt to create a solution to the problem of becoming bored listening to the same music.
+This was a fun personal project in my own attempt to create a solution to the problem of becoming bored listening to the same music.
 
 *Important Note: When searching, artists' names must be spelled correctly.*
 
