@@ -1,9 +1,16 @@
 # [Eclipse](https://eclipse-music.herokuapp.com/)
-A web app to discover new music artists through a chain of suggestions.
+### A web app to discover new music artists through a chain of suggestions.
 
-Live Demo: https://eclipse-music.herokuapp.com/
+This is a full stack React/Redux/Express app that uses Spotify API to give suggestions based on the user's initial search.
+
+Just type in a specific artist's name, and click through other recommended artists with the option to listen to 30 second song previews if they are available.
+
+This was a fun side project in my own attempt to create a solution to the problem of becoming bored listening to the same music.
 
 *Important Note: When searching, artists' names must be spelled correctly.*
+*Important Note: I have not yet tested for browser compatability. I created this testing on Chrome.*
+
+Live Demo: https://eclipse-music.herokuapp.com/
 
 # Preview
 
