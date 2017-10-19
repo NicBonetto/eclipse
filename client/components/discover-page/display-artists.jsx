@@ -7,8 +7,11 @@ import Loader from './loader.jsx'
 import Store from '../../store'
 
 class DisplayArtists extends Component {
-  render() {
+  componentWillMount() {
     Store.dispatch({ type: 'STOPPED_STREAMING' })
+  }
+
+  render() {
     if(this.props.recommended[0].name != '') {
       return (
         <div className="row">
