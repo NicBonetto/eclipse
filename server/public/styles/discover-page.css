@@ -100,7 +100,7 @@
 }
 
 .currently-playing-box {
-  animation: fade-in 2s infinite;
+  animation: continuous-fade 2s infinite;
 }
 
 .now-playing {
@@ -115,7 +115,7 @@
   border-top: 1px solid #ffd97d;
 }
 
-@keyframes fade-in {
+@keyframes continuous-fade {
   0% {
     opacity: 0;
   }
@@ -125,4 +125,17 @@
   100% {
     opacity: 0;
   }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.fade {
+  animation: fade-in 2s;
 }
