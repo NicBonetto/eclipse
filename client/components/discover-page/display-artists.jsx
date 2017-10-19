@@ -4,9 +4,11 @@ import CurrentArtist from './current-artist.jsx'
 import Recommended from './recommended-artists.jsx'
 import Songs from './songs.jsx'
 import Loader from './loader.jsx'
+import Store from '../../store'
 
 class DisplayArtists extends Component {
   render() {
+    Store.dispatch({ type: 'STOPPED_STREAMING' })
     if(this.props.recommended[0].name != '') {
       return (
         <div className="row">
