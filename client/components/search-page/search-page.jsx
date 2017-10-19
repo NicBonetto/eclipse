@@ -7,7 +7,7 @@ class SearchPage extends Component {
     return (
       <section>
         <NavBar/>
-        <section className="search-page container">
+        <section className="search-page container fade">
             <div className="row">
               <div className="col s12 center-align header-container">
                 <header className="font-style">

@@ -10,7 +10,7 @@ class DiscoverPage extends Component {
   
   render() {
     return (
-      <section>
+      <section className="fade">
         <NavBar/>
         <section className="discover-page container">
           <div className="row">
