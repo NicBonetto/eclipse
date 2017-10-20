@@ -1,7 +1,11 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
+import Store from '../../store'
 
 class CurrentArtist extends Component {
+  componentWillMount() {
+    Store.dispatch({ type: 'STOPPED_STREAMING' })
+  }
   render() {
     return (
       <section className="center-align">

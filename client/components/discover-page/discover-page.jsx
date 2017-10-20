@@ -1,13 +1,8 @@
 import React, { Component } from 'react'
 import NavBar from '../nav-bar.jsx'
 import DisplayArtists from './display-artists.jsx'
-import Store from '../../store'
 
 class DiscoverPage extends Component {
-  componentWillMount() {
-    Store.dispatch({ type: 'DO_NOT_REDIRECT' })
-  }
-  
   render() {
     return (
       <section className="fade">
