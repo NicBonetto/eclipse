@@ -4,13 +4,8 @@ import CurrentArtist from './current-artist.jsx'
 import Recommended from './recommended-artists.jsx'
 import Songs from './songs.jsx'
 import Loader from './loader.jsx'
-import Store from '../../store'
 
 class DisplayArtists extends Component {
-  componentWillMount() {
-    Store.dispatch({ type: 'STOPPED_STREAMING' })
-  }
-
   render() {
     if(this.props.recommended[0].name != '') {
       return (
