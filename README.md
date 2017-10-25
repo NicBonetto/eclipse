@@ -8,7 +8,7 @@ Just type in a specific artist's name, and click through other recommended artis
 This was a fun personal project in my own attempt to create a solution to the problem of becoming bored listening to the same music.
 
 + *Important Note: When searching, artists' names must be spelled correctly.*
-+ *Important Note: I have not yet tested for browser compatability. I created this testing on Chrome.*
++ *Important Note: I have not yet tested for browser compatability. I created this on Google Chrome.*
 
 Live Demo: https://eclipse-music.herokuapp.com/
 
