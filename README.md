@@ -36,6 +36,7 @@ List of libraries and technologies used in [Eclipse](https://eclipse-music.herok
 + CSS3
 + HTML5
 + ES2015
++ Babel
 + SASS
 + SVG
 + React
@@ -45,3 +46,4 @@ List of libraries and technologies used in [Eclipse](https://eclipse-music.herok
 + RESTful API
 + Spotify API
 + Heroku
++ Webpack
