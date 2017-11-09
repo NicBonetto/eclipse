@@ -1,5 +1,5 @@
 # [Eclipse](https://eclipse-music.herokuapp.com/)
-### A web app to discover new music artists through a chain of suggestions.
+### A web app to discover new music artists through an infinite chain of suggestions.
 
 This is a full stack React/Redux/Express app that uses Spotify API to give suggestions based on the user's initial search.
 
