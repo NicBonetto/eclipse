@@ -33,6 +33,15 @@
   text-decoration: underline;
 }
 
+.img-container {
+  transform-style: preserve-3d;
+  transition: transform 1.5s;
+}
+
+.img-container:hover {
+  transform: rotateY(360deg);
+}
+
 @keyframes shiftSides {
   0% {
     transform: translate3d(0, 40px, 0);

@@ -33,7 +33,7 @@ const recommended = name => pic => {
     <section className="recommended-box">
       <div className="shifter">
         <div className="center-align">
-          <div>
+          <div className="img-container">
             <img className="image-bubble-sm" src={pic}/>
           </div>
           <div>
