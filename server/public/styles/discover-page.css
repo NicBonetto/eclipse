@@ -33,12 +33,12 @@
   text-decoration: underline;
 }
 
-.img-container {
+.img-container img {
   transform-style: preserve-3d;
-  transition: transform 1.5s;
+  transition: transform 1.5s ease;
 }
 
-.img-container:hover {
+.img-container:hover img {
   transform: rotateY(360deg);
 }
 
