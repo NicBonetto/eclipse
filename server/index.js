@@ -22,6 +22,11 @@ app.get('/authorize', (req, res) => {
     })
 })
 
+app.get('/spotify/autocomplete', (req, res) => {
+  const suggestions = await spotify.searchArtists(req.query.term);
+  res.json(suggestions);
+})
+
 app.get('/spotify/search/:artist', (req, res) => {
   const artist = separateArtist(req.params.artist)
   spotify.searchArtists(artist)
