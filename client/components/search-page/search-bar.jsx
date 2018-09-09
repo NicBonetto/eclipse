@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { Redirect } from 'react-router'
 import { connect } from 'react-redux'
 import Store from '../../store'
+import { debounce } from 'lodash'
 
 class SearchBar extends Component {
   joinSearch(name) {
@@ -13,6 +14,7 @@ class SearchBar extends Component {
     Store.dispatch({ type: 'CLEAR_CURRENT_ARTIST' })
     Store.dispatch({ type: 'CLEAR_ARTISTS' })
     Store.dispatch({ type: 'CLEAR_SONGS' })
+    Store.dispatch({ type: 'CLEAR_SUGGESTIONS' })
     const artist = this.joinSearch(this.refs.keyword.value)
     fetch('/spotify/search/' + artist)
       .then(data => data.json())
@@ -32,6 +34,11 @@ class SearchBar extends Component {
     Store.dispatch({ type: 'REDIRECT_NOW' })
   }
 
+  handleKeyPress = debounce((e) => {
+    const suggestions = await fetch(`/spotify/autocomplete?term=${this.refs.keyword.value}`);
+    Store.dispatch({ type: 'RECEIVED_SUGGESTIONS', payload: suggestions });
+  }, 300)
+
   render() {
     if(this.props.redirect.shouldDirect) {
       return (
@@ -44,7 +51,7 @@ class SearchBar extends Component {
           <div className="row">
             <div className="col s6 offset-s3">
               <div className="input-field">
-                <input ref="keyword" autoFocus="autofocus" id="search" type="text"/>
+                <input ref="keyword" autoFocus="autofocus" id="search" type="text" onKeyPress={this.handleKeyPress.bind(this)}/>
                 <label className="label-icon"><i className="material-icons"></i></label>
               </div>
             </div>
