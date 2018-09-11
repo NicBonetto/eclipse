@@ -9,7 +9,7 @@
   "scripts": {
     "test": " npm dev && mocha --compilers js:babel-register -w -R nyan",
     "webpack": "webpack",
-    "start": "babel-node server/index.js --presets es2015",
+    "start": "babel-node server/index.js --presets env",
     "dev": "webpack && npm start",
     "postinstall": "webpack"
   },
